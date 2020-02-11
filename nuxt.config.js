@@ -38,6 +38,24 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
+    [
+      'nuxt-i18n',
+      {
+        locales: ['en', 'es'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en: {
+              greeting: 'Hello world!'
+            },
+            es: {
+              greeting: '¡Hola mundo!'
+            }
+          }
+        }
+      }
+    ]
   ],
   /*
    ** Build configuration
