@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <ProductZoomerWrapper />
+        <ProductZoomerWrapper :key="componentKey" />
         <nuxt-link to="next">Next!</nuxt-link>
     </div>
 </template>
@@ -12,8 +12,18 @@ export default {
     components: {
         ProductZoomerWrapper
     },
+    data() {
+        return {
+            componentKey: 0
+        };
+    },
+    methods: {
+        forceRerender() {
+            this.componentKey += Math.floor(Math.random() * Math.floor(9999));
+        }
+    },
     mounted() {
-        location.reload();
+        this.forceRerender();
     }
 };
 </script>

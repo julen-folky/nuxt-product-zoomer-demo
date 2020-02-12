@@ -1,14 +1,11 @@
 <template>
-    <div class="container">
-        <ProductZoomer :base-images="images" :base-zoomer-options="zoomerOptions"></ProductZoomer>
-    </div>
+    <ProductZoomer :base-images="images" :base-zoomer-options="zoomerOptions"></ProductZoomer>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            componentKey: 0,
             images: {
                 thumbs: [
                     {
